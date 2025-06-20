@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0"
+  },
+  "name": "blog-list",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@stylistic/eslint-plugin-js": "^4.4.1",
+    "eslint": "^9.29.0",
+    "globals": "^16.2.0"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "author": "Parvez Wijaya",
+  "license": "BSD-3-Clause",
+  "description": ""
+}
