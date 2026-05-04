@@ -1,5 +1,4 @@
 const dummy = (blogs) => {
-  console.log(blogs)
   return 1
 }
 
@@ -13,6 +12,10 @@ const totalLikes = (blogs) => {
       },
       0
     )
+}
+
+const favoriteBlog = (blogs) => {
+  
 }
 
 module.exports = {
