@@ -7,22 +7,22 @@
     "start": "webpack-dev-server --open --mode development --port 8080",
     "start-prod": "node app.js",
     "test": "jest",
-    "eslint": "eslint './**/*.{js,jsx}'",
+    "eslint": "eslint \"./**/*.{js,jsx}\"",
     "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smartlyio/fullstackopen-cicd.git"
+    "url": "git+https://github.com/saximn/full-stack-open.git"
   },
   "keywords": [
     "fullstack-open"
   ],
-  "author": "Smartly.io",
+  "author": "Parvez Wijaya",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/smartlyio/fullstackopen-cicd/issues"
+    "url": "https://github.com/saximn/full-stack-open/issues"
   },
-  "homepage": "https://github.com/smartlyio/fullstackopen-cicd#readme",
+  "homepage": "https://github.com/saximn/full-stack-open-cicd#readme",
   "dependencies": {
     "axios": "^1.13.6",
     "express": "^5.2.1",
