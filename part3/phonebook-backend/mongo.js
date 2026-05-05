@@ -7,15 +7,39 @@ if (process.argv.length < 3) {
 
 const password = process.argv[2]
 
-const url = `mongodb+srv://parvezwijaya:${password}@cluster0.zglhvth.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+const url = `mongodb+srv://parvezwijaya:${password}@cluster0.qjoaosa.mongodb.net/?retryWrites=true&w=majority&appName=fullstackopen`
 
 mongoose.set('strictQuery',false)
 
-console.log('connecting to url', url)
 mongoose.connect(url)
-  .then(result => {
-    console.log('connected to MongoDB')
+
+const personSchema= new mongoose.Schema({
+  name: String,
+  number: String,
+})
+
+const Person = mongoose.model('Person', personSchema)
+
+if (process.argv.length === 3) {
+  console.log("phonebook: ")
+  Person
+    .find({})
+    .then(persons => {
+      persons.forEach(person => {
+        console.log(`${person.name} ${person.number}`)
+      })
+    })
+    .then(() => mongoose.connection.close())
+}
+
+else {
+  const person = new Person({
+    name: process.argv[3],
+    number: process.argv[4],
   })
-  .catch(error => {
-    console.log('error connecting to MongoDB:', error.message)
+
+  person.save().then(result => {
+    console.log('person saved!')
+    mongoose.connection.close()
   })
+}
